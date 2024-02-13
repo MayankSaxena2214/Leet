@@ -25,13 +25,15 @@ public:
         ListNode*temp=head;
         while(temp!=NULL){
             ans.push_back(temp->val);
-            temp=temp->next;
+             temp=temp->next;
         }
         sort(ans.begin(),ans.end());
-        ListNode*anshead=NULL,*anstail=NULL;
-        for(auto i:ans){
-            inserttail(anshead,anstail,i);
+        ListNode*ptr=head;
+        int i=0;
+        while(ptr!=NULL){
+            ptr->val=ans[i++];
+            ptr=ptr->next;
         }
-        return anshead;
+        return head;
     }
 };
