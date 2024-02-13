@@ -8,10 +8,15 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+ /*
+BRUTE FORCE LOGIC
+
+1.First we will traverse the list 
+ 2. While traversing ,stores all the data that are less than the x into larr(vector to store the small elements) and all the elements thjat ar greater are stored in the garr(vector to store the greater element)
+3. tHEN AGAIN TRAVERSE THE LIST AND UPDATE THE DATA OF LIST WITH THE LARR FIRST AND THEN GARR VECTOR */
 class Solution {
 public:
     ListNode* partition(ListNode* head, int x) {
-        vector<int> ans;
         ListNode*temp=head;
         vector<int> larr;
         vector<int> garr;
