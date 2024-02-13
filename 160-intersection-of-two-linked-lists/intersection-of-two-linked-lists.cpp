@@ -12,7 +12,7 @@ public:
         if(headA==NULL || headB==NULL){
             return NULL;
         }
-        map<ListNode*,bool>mp;
+        unordered_map<ListNode*,bool>mp;
         ListNode*tempa=headA,*tempb=headB;
         while(tempa!=NULL){
             mp[tempa]=true;
